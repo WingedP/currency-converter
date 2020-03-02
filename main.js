@@ -2,7 +2,7 @@
 
 const exchangeRate = 23208;
 
-const currency = prompt("choose your currency?")
+const currency = prompt("Currency: VND or USD?")
 let amount = 0;
 
 // usdVnd = 23208
@@ -19,7 +19,7 @@ function vndToUsd() {
 function usdToVnd() {
     const convertedAmount = (amount * exchangeRate).toFixed(2);
     console.log("usd to vnd", convertedAmount)
-    return formatCurrency('usd', convertedAmount);
+    return formatCurrency('vnd', convertedAmount);
 }
 
 function formatCurrency(type, value) {
@@ -31,7 +31,7 @@ function formatCurrency(type, value) {
   }
 
 
-if (currency==="vnd") {
+if (currency==="VND") {
     amount = prompt ("amount of money?")
     while(isNaN(amount)===true){
         alert("you should type number ");
@@ -41,7 +41,7 @@ if (currency==="vnd") {
     
  
 
-} else if (currency==="usd"){
+} else if (currency==="USD"){
     amount = prompt ("amount of money?")
     while(isNaN(amount)===true){
         alert("you should type number!");
@@ -51,9 +51,9 @@ if (currency==="vnd") {
     
     
 } else {
-    alert("wrong input my man try again ; )")
+    alert("Wrong input. Press F5 and do it again please, since I don't know how to loop it back to currency prompt using (a) function or (b) while :( ")
     console.log ("wrong input")
-    amount = prompt ("amount of money?")
+
 }
 
 
